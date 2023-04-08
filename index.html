@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>My Website</title>
-  </head>
-  <body>
-    <h1>Welcome to my website</h1>
-    <p>This is a basic webpage.</p>
-  </body>
+<head>
+	<title>Cube in Isometric Perspective</title>
+	<style>
+		body {
+			background-color: #333;
+		}
+		.cube {
+			position: relative;
+			margin: 50px auto;
+			width: 100px;
+			height: 100px;
+			transform-style: preserve-3d;
+			transform: rotateX(-35deg) rotateY(-45deg);
+		}
+		.cube .face {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: #fff;
+			border: 2px solid #000;
+			box-sizing: border-box;
+			opacity: 0.9;
+		}
+		.cube .top {
+			transform: rotateX(-90deg) translateZ(50px);
+			background-color: #ff9f43;
+		}
+		.cube .bottom {
+			transform: rotateX(90deg) translateZ(50px);
+			background-color: #4bcffa;
+		}
+		.cube .left {
+			transform: rotateY(-90deg) translateZ(50px);
+			background-color: #34ace0;
+		}
+		.cube .right {
+			transform: rotateY(90deg) translateZ(50px);
+			background-color: #ffb142;
+		}
+		.cube .front {
+			transform: translateZ(50px);
+			background-color: #ff5252;
+		}
+		.cube .back {
+			transform: rotateY(180deg) translateZ(50px);
+			background-color: #2ecc71;
+		}
+	</style>
+</head>
+<body>
+	<div class="cube">
+		<div class="face top"></div>
+		<div class="face bottom"></div>
+		<div class="face left"></div>
+		<div class="face right"></div>
+		<div class="face front"></div>
+		<div class="face back"></div>
+	</div>
+</body>
 </html>
